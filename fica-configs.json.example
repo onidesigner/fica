@@ -1,0 +1,101 @@
+// =================================================================================
+// Plugin Config Example
+// =================================================================================
+// This file defines the configuration of plugin
+// Please edit values, remove all comments, and rename file to "fica-configs.json"
+// for the configuration takes effect.
+// =================================================================================
+
+{
+  // -------------------------------------------------------------------------------
+  // Project name (Required)
+  // -------------------------------------------------------------------------------
+  "projectName": "",
+
+  // -------------------------------------------------------------------------------
+  // UI library ID (Optional, but required when using the Mapping Library)
+  // -------------------------------------------------------------------------------
+  // The identifier of the UI library mapping used in the project.
+  // Supported values:
+  //  - "lego2.0.10-opusx1.0", "opra1.1.0-opusx1.0", "lego.anyframe.7.2-opusx1.3": Built-in mapping data with JSON file.
+  //  - "lego2.0.10", "opra1.2.0": Built-in mapping library with manual mapping.
+  //  - The id of the fica-mapping-library.json file in the project.
+  "uiLibraryId": "",
+
+  // -------------------------------------------------------------------------------
+  // Design system name (Optional, but required when using the Mapping Library)
+  // -------------------------------------------------------------------------------
+  // The name of the design system used in the project's design.
+  "designSystemName": "",
+
+  // -------------------------------------------------------------------------------
+  // Show node ID (Optional, only effective when UI library type = "react")
+  // -------------------------------------------------------------------------------
+  // When **true**, the generated code will embed the node’s ID as a comment/
+  // data‑attribute (e.g. `/* node‑id:abc123 */` or `data-node-id="abc123"`).
+  // When **false** the node ID is omitted.
+  // Default: false
+  "showNodeId": false,
+
+  // -------------------------------------------------------------------------------
+  // CSS framework (Required)
+  // -------------------------------------------------------------------------------
+  // The CSS library used in the project.
+  // Supported values:
+  //  - "tailwind" (default)
+  //  - "purecss"
+  "cssFramework": "tailwind",
+
+  // -------------------------------------------------------------------------------
+  // Mapping Mode (Optional)
+  // -------------------------------------------------------------------------------
+  // Map UI Library in Portal or Plugin.
+  // Supported values:
+  //  - "plugin" (default)
+  //  - "portal"
+  "mappingMode": "plugin",
+
+  // -------------------------------------------------------------------------------
+  // Design token config (Optional)
+  // -------------------------------------------------------------------------------
+  //  - caseConvention:  "default" (Default) | "camel" | "kebab"
+  //  - namingPattern: "semantic" (Default) | "primitive"
+  "designToken": {
+    "caseConvention": "default",
+    "namingPattern": "semantic"
+  },
+
+  // -------------------------------------------------------------------------------
+  // Target folders
+  // -------------------------------------------------------------------------------
+  // Define where generated code and assets will be placed.
+  // Each entry includes:
+  //   - screen: The category or section name.
+  //   - files: A list of file/folder configurations.
+  //     + path: Target directory path where files will be generated or stored.
+  //     + type: (required) Type of file, e.g, "js", "css", "image".
+  //     + name: (Optional) Specific filename or folder name if required.
+  "targetFolders": [
+    {
+      "screen": "UI/UX",
+      "files": [
+        { "path": "/" }
+      ]
+    },
+    {
+      "screen": "Assets",
+       "files": [
+        { "path": "/assets/external", "type": "js" },
+        { "path": "/assets/css", "type": "css" },
+        { "path": "/assets/images", "type": "image" },
+        { "path": "/assets/fonts", "type": "font" }
+      ]
+    },
+    {
+      "screen": "Publishing",
+      "files": [
+        { "name": "variables.css", "path": "/assets/css" }
+      ]
+    }
+  ]
+}

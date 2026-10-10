@@ -1,0 +1,38 @@
+// ========================================================================================
+// Mapping Library Example
+// ========================================================================================
+// This file defines the configuration of a mapping library.
+// Please edit values, remove all comments, and rename file to "fica-mapping-library.json"
+// for the configuration takes effect.
+// ========================================================================================
+
+{
+  // -------------------------------------------------------------------------------
+  // Library information
+  // -------------------------------------------------------------------------------
+  // - name:    (Required) Name of the library (e.g., "LEGO Vue Assets v2.0.10")
+  // - id:      (Required) Unique identifier of the library (used as reference, e.g., "lego2.0.10")
+  // - fw:      (Required) Framework this library belongs to (e.g., "react", "vue")
+  // - version: (Required) Version number of the mapping schema (Valid version: 1.1, invalid version: 1.1.0) . If you change the content of this file, you need to increase the version
+  "name": "LEGO Vue Assets v2.0.10",
+  "id": "lego2.0.10",
+  "fw": "vue",
+  "version": 1.0,
+
+  // -------------------------------------------------------------------------------
+  // Components
+  // -------------------------------------------------------------------------------
+  // List of component mapping definitions.
+  // Each entry includes:
+  //   - id:            (Required)
+  //   - name:          (Required)
+  //   - tag:           (Required)
+  //   - attributes:    (Required)
+  //   - group:         (Optional)
+  //   - selfContained: (Optional)
+  //   - attrs:         (Optional)
+  //   - classes:       (Optional)
+  //   - innerHTML:     (Optional)
+  //   - isLeaf:        (Optional)
+  "components": []
+}
