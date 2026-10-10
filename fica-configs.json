@@ -1,0 +1,32 @@
+{
+  "projectName": "Project Example",
+  "cssFramework": "tailwind",
+  "mappingMode": "plugin",
+  "designToken": {
+    "caseConvention": "default",
+    "namingPattern": "semantic"
+  },
+  "targetFolders": [
+    {
+      "screen": "UI/UX",
+      "files": [
+        { "path": "/" }
+      ]
+    },
+    {
+      "screen": "Assets",
+       "files": [
+        { "path": "/assets/external", "type": "js" },
+        { "path": "/assets/css", "type": "css" },
+        { "path": "/assets/images", "type": "image" },
+        { "path": "/assets/fonts", "type": "font" }
+      ]
+    },
+    {
+      "screen": "Publishing",
+      "files": [
+        { "name": "variables.css", "path": "/assets/css" }
+      ]
+    }
+  ]
+}
